@@ -29,6 +29,7 @@ export default function Footer() {
             <li><Link href="#" className="hover:text-secondary transition-colors">Home</Link></li>
             <li><Link href="#offerings" className="hover:text-secondary transition-colors">Offerings</Link></li>
             <li><Link href="#workshop" className="hover:text-secondary transition-colors">Workshops</Link></li>
+            <li><Link href="#nada-mandala" className="hover:text-secondary transition-colors">Nāda-Maṇḍala</Link></li>
             <li><Link href="#" className="hover:text-secondary transition-colors">Contact</Link></li>
           </ul>
         </div>
@@ -36,6 +37,7 @@ export default function Footer() {
         {/* Contact */}
         <div className="text-center md:text-right">
           <h3 className="font-serif text-xl mb-6">Visit Us</h3>
+          <p className="font-heading text-primary-foreground mb-4">Healing With Feeling</p>
           <ul className="space-y-4 font-light text-sm opacity-90">
             <li className="flex gap-2 justify-center md:justify-end items-start leading-relaxed">
               <MapPin className="w-5 h-5 shrink-0 text-secondary" />
@@ -43,11 +45,11 @@ export default function Footer() {
             </li>
             <li className="flex gap-2 justify-center md:justify-end items-center">
               <Phone className="w-4 h-4 text-secondary" />
-              <span>+91 98765 43210</span>
+              <span>9711167679</span>
             </li>
             <li className="flex gap-2 justify-center md:justify-end items-center">
               <Mail className="w-4 h-4 text-secondary" />
-              <span>contact@avyuktaenterprises.com</span>
+              <span>info@avyuktaenterprises.com</span>
             </li>
           </ul>
         </div>

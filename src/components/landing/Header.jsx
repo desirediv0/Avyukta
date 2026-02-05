@@ -11,6 +11,7 @@ const navLinks = [
   { name: "Offerings", href: "#offerings" },
   { name: "Experience", href: "#experience" },
   { name: "Workshop", href: "#workshop" },
+  { name: "Nāda-Maṇḍala", href: "#nada-mandala" },
 ];
 
 const Header = () => {

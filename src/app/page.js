@@ -1,9 +1,9 @@
-
 import HeroSection from "@/components/landing/HeroSection";
 import AboutSection from "@/components/landing/AboutSection";
 import ExperienceSection from "@/components/landing/ExperienceSection";
 import OfferingsSection from "@/components/landing/OfferingsSection";
 import WorkshopSection from "@/components/landing/WorkshopSection";
+import NadaMandalaSection from "@/components/landing/NadaMandalaSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <OfferingsSection />
       <ExperienceSection />
       <WorkshopSection />
-
+      <NadaMandalaSection />
     </main>
   );
 }

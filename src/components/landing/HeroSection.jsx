@@ -1,7 +1,7 @@
 "use client"
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Gift, Calendar } from "lucide-react";
 
 const HeroSection = () => {
   const scrollToAbout = () => {
@@ -11,10 +11,17 @@ const HeroSection = () => {
     }
   };
 
+  const scrollToWorkshop = () => {
+    const element = document.querySelector("#workshop");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero pt-20"
+      className="relative flex p-5 items-center justify-center overflow-hidden bg-gradient-hero pt-20"
     >
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -71,10 +78,29 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-12 leading-relaxed"
+            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-8 leading-relaxed"
           >
             &quot;Experience the art of sacred living&quot;
           </motion.p>
+
+          {/* Workshop Early Bird Promo */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.65 }}
+            onClick={scrollToWorkshop}
+            className="mb-12 max-w-2xl mx-auto bg-primary text-primary-foreground border border-gold/30 p-5 md:p-6 text-center cursor-pointer hover:border-gold/50 transition-colors"
+          >
+            <span className="inline-block bg-gold text-primary text-[10px] font-bold px-3 py-0.5 tracking-wider mb-3">EARLY BIRD</span>
+            <p className="text-sm md:text-base font-medium mb-2 flex items-center justify-center gap-2 flex-wrap">
+              <Calendar className="w-4 h-4 text-gold shrink-0" />
+              Book by 17th February 2026 and Save ₹2,000
+            </p>
+            <p className="text-sm text-primary-foreground/90 flex items-center justify-center gap-2 flex-wrap">
+              <Gift className="w-4 h-4 text-gold shrink-0" />
+              Vision Board Workshop worth ₹3,500 included — FREE
+            </p>
+          </motion.div>
 
           {/* Offerings Preview */}
           <motion.div
