@@ -44,6 +44,10 @@ const WorkshopSection = () => {
     window.open("https://wa.me/917503896608?text=Hi, I'm interested in the Manifestation Workshop on 1st March 2026", "_blank");
   };
 
+  const openWhatsAppNada = () => {
+    window.open("https://wa.me/917503896608?text=Hi%2C%20I%20would%20like%20to%20book%20my%20spot%20for%20N%C4%81da-Ma%E1%B9%87%E1%B8%8Dala%20Baithak%20on%201st%20March%202026.", "_blank");
+  };
+
   return (
     <section id="workshop" className="py-24 md:py-32 bg-cream relative overflow-hidden">
       {/* Background Decoration */}
@@ -174,13 +178,17 @@ const WorkshopSection = () => {
               </p>
 
               <p className="text-sm text-primary-foreground/70 mb-8">
-                Reserve your seat with ₹2,000 advance. Balance payable at venue.
+                Reserve your seat with ₹2,500 advance. Balance payable at venue.
               </p>
 
               {/* Bonus */}
-              <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
-                <Gift className="w-5 h-5 text-gold" />
+              <div className="bg-gold/20 border border-gold/30 p-4 mb-4 flex items-center justify-center gap-3">
+                <Gift className="w-5 h-5 text-gold shrink-0" />
                 <span>Vision Board Workshop worth Rs 3500 Included.</span>
+              </div>
+              <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
+                <Gift className="w-5 h-5 text-gold shrink-0" />
+                <span>Nāda-Maṇḍala Classical Baithak worth Rs 2000 Included.</span>
               </div>
 
               <p className="text-xs text-primary-foreground/60 mb-8">
@@ -202,7 +210,6 @@ const WorkshopSection = () => {
         </motion.div>
 
 
-
         {/* About Our Teacher */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -210,7 +217,7 @@ const WorkshopSection = () => {
           transition={{ duration: 0.8, delay: 0.7 }}
           className="max-w-5xl mx-auto"
         >
-          <p className="text-sm tracking-widest text-muted-foreground mb-8 text-center">About Our Teacher</p>
+
           <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-start">
             <div className="shrink-0 w-full md:w-80 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30">
               <Image
@@ -218,10 +225,11 @@ const WorkshopSection = () => {
                 alt="Reenu Sharma"
                 width={100}
                 height={100}
-                className="w-full h-full object-contain"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex-1 space-y-6">
+              <p className="text-sm tracking-widest text-muted-foreground mb-8 text-left">About Our Facilitator</p>
               <h4 className="font-heading text-3xl text-primary">Reenu Sharma</h4>
               <p className="text-muted-foreground leading-relaxed">
                 I am Reenu Sharma based in Delhi. I am a certified Law of Attraction Teacher and Life Coach. With 8 years of experience my expertise lies in helping individuals unleash their own inner power, which is the only cooperative component anyone needs to manifest the life of their dreams.
@@ -296,7 +304,7 @@ const WorkshopSection = () => {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="max-w-5xl mx-auto"
         >
-          <p className="text-sm tracking-widest text-muted-foreground mb-10 text-center">About Artists</p>
+          <p className="text-sm tracking-widest text-muted-foreground mb-10 md:mb-5 text-left md:pl-60">About Artists</p>
           <div className="space-y-12">
             {/* Shri Anuj Dangwal Ji - Khayal Vocal */}
             <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -351,6 +359,85 @@ const WorkshopSection = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* Book Your Spot to Experience Nāda-Maṇḍala - same UI as ENERGY EXCHANGE */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.75 }}
+          className="max-w-4xl mx-auto mt-20"
+        >
+          <div className="text-center mb-10">
+            <h3 className="font-heading text-3xl md:text-4xl text-primary mb-4">Book Your Spot to Experience Nāda-Maṇḍala</h3>
+            <p className="text-muted-foreground italic max-w-2xl mx-auto">
+              An intimate evening of Hindustani Khayal — where rāga becomes prayer, and sound becomes stillness.
+            </p>
+          </div>
+
+          {/* DATE, TIME, VENUE cards - same style as workshop details */}
+          <div className="grid md:grid-cols-3 gap-6 mb-10">
+            <Card className="card-sacred text-center rounded-none">
+              <CardContent className="p-6">
+                <Calendar className="w-8 h-8 text-gold mx-auto mb-4" />
+                <p className="text-xs tracking-widest text-muted-foreground mb-2">DATE</p>
+                <p className="text-foreground font-medium">1st March 2026, Sunday</p>
+              </CardContent>
+            </Card>
+            <Card className="card-sacred text-center rounded-none">
+              <CardContent className="p-6">
+                <Clock className="w-8 h-8 text-gold mx-auto mb-4" />
+                <p className="text-xs tracking-widest text-muted-foreground mb-2">TIME</p>
+                <p className="text-foreground font-medium">5:30 to 7:30 PM</p>
+              </CardContent>
+            </Card>
+            <Card className="card-sacred text-center rounded-none">
+              <CardContent className="p-6">
+                <MapPin className="w-8 h-8 text-gold mx-auto mb-4" />
+                <p className="text-xs tracking-widest text-muted-foreground mb-2">VENUE</p>
+                <p className="text-foreground font-medium text-sm">Healing with Feeling, D-333, Block D, Defence Colony, New Delhi – 110024</p>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Dark maroon pricing card - same as ENERGY EXCHANGE */}
+          <Card className="bg-primary text-primary-foreground overflow-hidden rounded-none">
+            <CardContent className="p-8 md:p-12 text-center relative">
+              <div className="absolute top-4 right-4 bg-gold text-maroon-dark text-xs font-bold px-4 py-1 tracking-wider">
+                EARLY BIRD
+              </div>
+
+              <p className="text-sm tracking-widest text-primary-foreground/70 mb-4">BOOK NĀDA-MAṆḌALA</p>
+
+              <div className="mb-6">
+                <span className="text-5xl font-heading">₹2,000</span>
+                <span className="text-primary-foreground/70 line-through ml-4">₹3,000</span>
+                <span className="text-primary-foreground/80 text-sm ml-2">per head</span>
+              </div>
+
+              <p className="text-primary-foreground/80 mb-2">
+                High Tea and Snacks will be served Before Baithak.
+              </p>
+              <p className="text-primary-foreground/70 text-sm mb-6">Direct Payment — No Advance</p>
+
+              <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
+                <Gift className="w-5 h-5 text-gold" />
+                <span>An evening of Khayal, Kīrtan & sacred sound</span>
+              </div>
+
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  onClick={openWhatsAppNada}
+                  className="inline-flex items-center justify-center gap-3 w-full sm:w-auto min-w-[280px] px-10 py-6 text-sm tracking-widest uppercase font-semibold rounded-none bg-[#d4af37] text-[#2c0a0f] border-2 border-white/30 shadow-lg hover:bg-[#e5c54a] hover:text-[#2c0a0f] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                >
+                  <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="shrink-0" />
+                  Register via WhatsApp
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
       </div>
     </section>
   );

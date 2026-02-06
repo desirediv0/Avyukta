@@ -54,7 +54,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-primary mb-4 tracking-wide"
+            className="font-heading text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold text-primary mb-4 text-nowrap"
           >
             Avyukta Enterprises
           </motion.h1>
@@ -82,29 +82,12 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-6 leading-relaxed"
+            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-10 leading-relaxed"
           >
             &quot;Experience the art of sacred living&quot;
           </motion.p>
 
-          {/* Workshop Early Bird Promo */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.65 }}
-            onClick={scrollToWorkshop}
-            className="mb-8 max-w-2xl mx-auto bg-primary text-primary-foreground border border-gold/30 p-5 md:p-6 text-center cursor-pointer hover:border-gold/50 transition-colors"
-          >
-            <span className="inline-block bg-gold text-primary text-[10px] font-bold px-3 py-0.5 tracking-wider mb-3">EARLY BIRD</span>
-            <p className="text-sm md:text-base font-medium mb-2 flex items-center justify-center gap-2 flex-wrap">
-              <Calendar className="w-4 h-4 text-gold shrink-0" />
-              Book By 17th February 2026 and Save Rs 2000
-            </p>
-            <p className="text-sm text-primary-foreground/90 flex items-center justify-center gap-2 flex-wrap">
-              <Gift className="w-4 h-4 text-gold shrink-0" />
-              Vision Board Workshop worth Rs 3500 Included.
-            </p>
-          </motion.div>
+
 
           {/* Offerings Preview */}
           <motion.div
@@ -121,21 +104,7 @@ const HeroSection = () => {
             ))}
           </motion.div>
 
-          {/* CTA Button - id used by floating button to show/hide */}
-          <motion.div
-            id="hero-book-now-cta"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Button
-              size="lg"
-              onClick={openWhatsApp}
-              className="btn-sacred px-12 py-6 text-sm tracking-widest uppercase font-medium rounded-none"
-            >
-              BOOK NOW
-            </Button>
-          </motion.div>
+
         </div>
       </div>
 

@@ -3,11 +3,17 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Calendar, Clock, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 const NadaMandalaSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  const openWhatsAppNada = () => {
+    window.open("https://wa.me/917503896608?text=Hi%2C%20I%20would%20like%20to%20book%20my%20spot%20for%20N%C4%81da-Ma%E1%B9%87%E1%B8%8Dala%20Baithak%20on%201st%20March%202026.", "_blank");
+  };
 
   return (
     <section id="nada-mandala" className="py-24 bg-cream relative overflow-hidden">
@@ -115,8 +121,6 @@ const NadaMandalaSection = () => {
           <p className="text-muted-foreground mb-6">You are no longer listening to the music — you are inside it.</p>
           <p className="font-heading text-lg text-primary">This is Naad Yoga — the yoga of sacred sound. Where vibration becomes meditation, and every note reminds you of your own essence.</p>
         </motion.div>
-
-
 
 
       </div>

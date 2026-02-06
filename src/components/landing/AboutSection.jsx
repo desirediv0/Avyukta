@@ -1,4 +1,4 @@
-"use client";import { motion } from "framer-motion";
+"use client"; import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -7,10 +7,10 @@ const AboutSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-24 md:py-32 bg-secondary/30 relative overflow-hidden">
+    <section id="about" className="py-24  bg-secondary/30 relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-gold/3 to-transparent pointer-events-none" />
-      
+
       <div className="container mx-auto px-6" ref={ref}>
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
@@ -39,14 +39,14 @@ const AboutSection = () => {
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              We believe that true luxury lies not in excess, but in the profound beauty of intentional living. 
-              Through our curated offerings of fragrance, ritual, music, and mindfulness, we invite you to 
+              We believe that true luxury lies not in excess, but in the profound beauty of intentional living.
+              Through our curated offerings of fragrance, ritual, music, and mindfulness, we invite you to
               reconnect with the sacred rhythms that have guided generations of seekers.
             </p>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Each element of Avyukta is crafted to awaken the senses, nurture the spirit, and 
-              transform the everyday into the extraordinary. We are not simply a brand—we are 
+              Each element of Avyukta is crafted to awaken the senses, nurture the spirit, and
+              transform the everyday into the extraordinary. We are not simply a brand—we are
               a sanctuary for those who seek depth, meaning, and the gentle art of slow living.
             </p>
 

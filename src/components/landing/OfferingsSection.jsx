@@ -37,7 +37,7 @@ const OfferingsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="offerings" className="pb-10 bg-cream relative">
+    <section id="offerings" className="pb-10 bg-cream relative py-10">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
