@@ -417,7 +417,7 @@ const WorkshopSection = () => {
               <p className="text-primary-foreground/80 mb-2">
                 High Tea and Snacks will be served Before Baithak.
               </p>
-              <p className="text-primary-foreground/70 text-sm mb-6">Direct Payment — No Advance</p>
+
 
               <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
                 <Gift className="w-5 h-5 text-gold" />
