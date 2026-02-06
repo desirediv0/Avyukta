@@ -1,10 +1,28 @@
+"use client";
 import Link from "next/link";
 import { Instagram, Globe, Mail, Phone, MapPin } from "lucide-react";
 import Image from "next/image";
 
+const footerLinks = [
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "Offerings", href: "#offerings" },
+  { name: "Experience", href: "#experience" },
+  { name: "Workshops", href: "#workshop" },
+  { name: "Nāda-Maṇḍala", href: "#nada-mandala" },
+  { name: "Contact", href: "#footer" },
+];
+
 export default function Footer() {
+  const scrollToSection = (href) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <footer className="bg-primary text-primary-foreground pt-16 pb-8">
+    <footer id="footer" className="bg-primary text-primary-foreground pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12 mb-12">
         {/* Brand */}
         <div className="text-center md:text-left">
@@ -13,10 +31,10 @@ export default function Footer() {
             Luxury House of Indian Soul. Experiential living through fragrance, sound, and stillness.
           </p>
           <div className="flex gap-4 mt-6 justify-center md:justify-start">
-            <Link href="https://www.instagram.com/avyuktaenterprises" target="_blank" className="hover:text-secondary transition-colors">
+            <Link href="https://www.instagram.com/avyuktaenterprises" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
               <Instagram className="w-6 h-6" />
             </Link>
-            <Link href="https://www.avyuktaenterprises.com" target="_blank" className="hover:text-secondary transition-colors">
+            <Link href="https://www.avyuktaenterprises.com" target="_blank" rel="noopener noreferrer" className="hover:text-secondary transition-colors">
               <Globe className="w-6 h-6" />
             </Link>
           </div>
@@ -26,11 +44,17 @@ export default function Footer() {
         <div className="text-center">
           <h3 className="font-serif text-xl mb-6">Explore</h3>
           <ul className="space-y-3 font-light">
-            <li><Link href="#" className="hover:text-secondary transition-colors">Home</Link></li>
-            <li><Link href="#offerings" className="hover:text-secondary transition-colors">Offerings</Link></li>
-            <li><Link href="#workshop" className="hover:text-secondary transition-colors">Workshops</Link></li>
-            <li><Link href="#nada-mandala" className="hover:text-secondary transition-colors">Nāda-Maṇḍala</Link></li>
-            <li><Link href="#" className="hover:text-secondary transition-colors">Contact</Link></li>
+            {footerLinks.map((link) => (
+              <li key={link.name}>
+                <button
+                  type="button"
+                  onClick={() => scrollToSection(link.href)}
+                  className="hover:text-secondary transition-colors"
+                >
+                  {link.name}
+                </button>
+              </li>
+            ))}
           </ul>
         </div>
 

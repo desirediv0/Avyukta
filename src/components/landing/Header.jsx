@@ -18,11 +18,13 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
     setIsOpen(false);
+    setTimeout(() => {
+      const element = document.querySelector(href);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }, 150);
   };
 
   return (
@@ -86,17 +88,14 @@ const Header = () => {
           >
             <nav className="container mx-auto px-6 py-6 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection(link.href);
-                  }}
-                  className="text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors tracking-wide uppercase py-2"
+                  type="button"
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-left text-sm font-medium text-primary-foreground/80 hover:text-secondary transition-colors tracking-wide uppercase py-2 w-full"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
               <a
                 href="https://www.instagram.com/avyuktaenterprises"
