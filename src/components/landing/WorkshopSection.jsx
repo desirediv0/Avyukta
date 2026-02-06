@@ -152,12 +152,55 @@ const WorkshopSection = () => {
           </div>
         </motion.div>
 
+          <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.7 }}
+          className="max-w-5xl mx-auto"
+        >
+
+          <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-start">
+            <div className="shrink-0 w-full md:w-80 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30">
+              <Image
+                src="/t-4.jpg"
+                alt="Reenu Sharma"
+                width={100}
+                height={100}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="flex-1 space-y-6">
+              <p className="text-sm tracking-widest text-muted-foreground mb-8 text-left">About Our Facilitator</p>
+              <h4 className="font-heading text-3xl text-primary">Reenu Sharma</h4>
+              <p className="text-muted-foreground leading-relaxed">
+                I am Reenu Sharma based in Delhi. I am a certified Law of Attraction Teacher and Life Coach. With 8 years of experience my expertise lies in helping individuals unleash their own inner power, which is the only cooperative component anyone needs to manifest the life of their dreams.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                I specialise in the deep work of Emotional Healing, Shadow work and Inner Child Healing facilitating the transformation from inside out.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                Through my personal sessions and 125+ immersive workshops I have helped hundreds of individuals rewrite their inner narrative which has made them master the science and spirituality of manifestation.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                I have led some very powerful and hugely successful Law of Attraction sessions in Corporate sector and prominent educational institutions including Barista head office and YWCA.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                My unique strength lies in facilitating a profound shift in perspective empowering my clients to move from the state of survival to one of conscious creation. I am on a mission to help seekers heal their emotions and step into a life of alignment and power.
+              </p>
+              <div className="pt-6 border-t border-border/50">
+                <p className="text-sm text-muted-foreground">Organized by</p>
+                <p className="font-heading text-xl text-primary mt-2">Avyukta Enterprises</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
         {/* Pricing */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-2xl mx-auto mb-16"
+          className="max-w-2xl mx-auto mb-16 mt-4"
         >
           <Card className="bg-primary text-primary-foreground overflow-hidden rounded-none">
             <CardContent className="p-8 md:p-12 text-center relative">
@@ -211,48 +254,7 @@ const WorkshopSection = () => {
 
 
         {/* About Our Teacher */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.7 }}
-          className="max-w-5xl mx-auto"
-        >
-
-          <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-start">
-            <div className="shrink-0 w-full md:w-80 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30">
-              <Image
-                src="/t-4.jpg"
-                alt="Reenu Sharma"
-                width={100}
-                height={100}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1 space-y-6">
-              <p className="text-sm tracking-widest text-muted-foreground mb-8 text-left">About Our Facilitator</p>
-              <h4 className="font-heading text-3xl text-primary">Reenu Sharma</h4>
-              <p className="text-muted-foreground leading-relaxed">
-                I am Reenu Sharma based in Delhi. I am a certified Law of Attraction Teacher and Life Coach. With 8 years of experience my expertise lies in helping individuals unleash their own inner power, which is the only cooperative component anyone needs to manifest the life of their dreams.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                I specialise in the deep work of Emotional Healing, Shadow work and Inner Child Healing facilitating the transformation from inside out.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Through my personal sessions and 125+ immersive workshops I have helped hundreds of individuals rewrite their inner narrative which has made them master the science and spirituality of manifestation.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                I have led some very powerful and hugely successful Law of Attraction sessions in Corporate sector and prominent educational institutions including Barista head office and YWCA.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                My unique strength lies in facilitating a profound shift in perspective empowering my clients to move from the state of survival to one of conscious creation. I am on a mission to help seekers heal their emotions and step into a life of alignment and power.
-              </p>
-              <div className="pt-6 border-t border-border/50">
-                <p className="text-sm text-muted-foreground">Organized by</p>
-                <p className="font-heading text-xl text-primary mt-2">Avyukta Enterprises</p>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+      
         {/* Classical Musical Baithak */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
