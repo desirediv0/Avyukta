@@ -2,6 +2,7 @@ import { Cormorant_Garamond, Raleway } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
+import FloatingBookNow from "@/components/landing/FloatingBookNow";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
       <body className={`${cormorant.variable} ${raleway.variable} antialiased font-body bg-background text-foreground`}>
         <Header />
         {children}
+        <FloatingBookNow />
         <Footer />
       </body>
     </html>

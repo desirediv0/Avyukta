@@ -18,10 +18,14 @@ const HeroSection = () => {
     }
   };
 
+  const openWhatsApp = () => {
+    window.open("https://wa.me/917503896608?text=Hi%2C%20I%20would%20like%20to%20book%20%2F%20get%20more%20information.", "_blank");
+  };
+
   return (
     <section
       id="hero"
-      className="relative flex p-5 items-center justify-center overflow-hidden bg-gradient-hero pt-20"
+      className="relative min-h-screen flex p-5 items-center justify-center overflow-hidden bg-gradient-hero pt-20"
     >
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -40,7 +44,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
+            className="mb-4"
           >
             <span className="ornament text-4xl">❧</span>
           </motion.div>
@@ -50,7 +54,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-primary mb-6 tracking-wide"
+            className="font-heading text-5xl md:text-7xl lg:text-8xl font-light text-primary mb-4 tracking-wide"
           >
             Avyukta Enterprises
           </motion.h1>
@@ -70,7 +74,7 @@ const HeroSection = () => {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="section-divider my-8"
+            className="section-divider my-4"
           />
 
           {/* Tagline */}
@@ -78,7 +82,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-8 leading-relaxed"
+            className="font-heading text-2xl md:text-3xl lg:text-4xl text-foreground/80 italic mb-6 leading-relaxed"
           >
             &quot;Experience the art of sacred living&quot;
           </motion.p>
@@ -89,16 +93,16 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.65 }}
             onClick={scrollToWorkshop}
-            className="mb-12 max-w-2xl mx-auto bg-primary text-primary-foreground border border-gold/30 p-5 md:p-6 text-center cursor-pointer hover:border-gold/50 transition-colors"
+            className="mb-8 max-w-2xl mx-auto bg-primary text-primary-foreground border border-gold/30 p-5 md:p-6 text-center cursor-pointer hover:border-gold/50 transition-colors"
           >
             <span className="inline-block bg-gold text-primary text-[10px] font-bold px-3 py-0.5 tracking-wider mb-3">EARLY BIRD</span>
             <p className="text-sm md:text-base font-medium mb-2 flex items-center justify-center gap-2 flex-wrap">
               <Calendar className="w-4 h-4 text-gold shrink-0" />
-              Book by 17th February 2026 and Save ₹2,000
+              Book By 17th February 2026 and Save Rs 2000
             </p>
             <p className="text-sm text-primary-foreground/90 flex items-center justify-center gap-2 flex-wrap">
               <Gift className="w-4 h-4 text-gold shrink-0" />
-              Vision Board Workshop worth ₹3,500 included — FREE
+              Vision Board Workshop worth Rs 3500 Included.
             </p>
           </motion.div>
 
@@ -107,7 +111,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.7 }}
-            className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-muted-foreground mb-12"
+            className="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-muted-foreground mb-5"
           >
             {["Fragrance", "Ritual", "Music", "Mindfulness"].map((item, index) => (
               <span key={item} className="flex items-center gap-4">
@@ -117,40 +121,25 @@ const HeroSection = () => {
             ))}
           </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Button - id used by floating button to show/hide */}
           <motion.div
+            id="hero-book-now-cta"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Button
               size="lg"
-              onClick={scrollToAbout}
+              onClick={openWhatsApp}
               className="btn-sacred px-12 py-6 text-sm tracking-widest uppercase font-medium rounded-none"
             >
-              Discover Our World
+              BOOK NOW
             </Button>
           </motion.div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-          className="flex flex-col items-center gap-2 text-muted-foreground cursor-pointer"
-          onClick={scrollToAbout}
-        >
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
-          <ChevronDown className="w-5 h-5" />
-        </motion.div>
-      </motion.div>
+
     </section>
   );
 };

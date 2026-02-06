@@ -27,7 +27,7 @@ const features = [
   {
     icon: Clock,
     title: "TIME",
-    value: "10:00 AM - 6:00 PM",
+    value: "10:00 AM - 7:30 PM",
   },
   {
     icon: MapPin,
@@ -170,7 +170,7 @@ const WorkshopSection = () => {
               </div>
 
               <p className="text-primary-foreground/80 mb-6">
-                Save ₹2,000 if booked by 17th February 2026
+                Book By 17th February 2026 and Save Rs 2000
               </p>
 
               <p className="text-sm text-primary-foreground/70 mb-8">
@@ -180,61 +180,28 @@ const WorkshopSection = () => {
               {/* Bonus */}
               <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
                 <Gift className="w-5 h-5 text-gold" />
-                <span>Vision Board Workshop worth ₹3,500 — <strong>FREE</strong></span>
+                <span>Vision Board Workshop worth Rs 3500 Included.</span>
               </div>
 
               <p className="text-xs text-primary-foreground/60 mb-8">
                 *Includes Lunch, High Tea & All Workshop Materials
               </p>
 
-              <Button
-                size="lg"
-                onClick={openWhatsApp}
-                className="btn-gold px-12 py-6 text-sm tracking-widest uppercase font-semibold rounded-none w-full md:w-auto"
-              >
-                Register via WhatsApp
-              </Button>
+              <div className="flex justify-center">
+                <Button
+                  size="lg"
+                  onClick={openWhatsApp}
+                  className="inline-flex items-center justify-center gap-3 w-full sm:w-auto min-w-[280px] px-10 py-6 text-sm tracking-widest uppercase font-semibold rounded-none bg-[#d4af37] text-[#2c0a0f] border-2 border-white/30 shadow-lg hover:bg-[#e5c54a] hover:text-[#2c0a0f] hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                >
+                  <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="shrink-0" />
+                  Register via WhatsApp
+                </Button>
+              </div>
             </CardContent>
           </Card>
         </motion.div>
 
-        {/* Classical Musical Baithak */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="max-w-4xl mx-auto mb-16"
-        >
-          <Card className="bg-secondary/50 border-gold/20 rounded-none">
-            <CardContent className="p-8">
-              <div className="text-center mb-8">
-                <Music className="w-10 h-10 text-gold mx-auto mb-4" />
-                <h4 className="font-heading text-2xl text-primary mb-2">Coming Soon: Classical Musical Baithak</h4>
-                <p className="text-muted-foreground mb-4">
-                  This workshop will be concluded with a soulful Classical Musical Baithak, offering a deeply
-                  calming and elevated closing experience.
-                </p>
-                <p className="text-sm text-gold font-medium">Khayal Vocal — 10:00 AM to 7:30 PM</p>
-              </div>
-              <div className="grid sm:grid-cols-2 gap-8">
-                <div className="text-center">
-                  <div className="aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 mb-4">
-                    <Image src="/rp%20(1).jpeg" alt="Shri Ravikant Pandeya Ji" width={100} height={100} className="w-full h-full object-cover" />
-                  </div>
-                  <p className="font-heading text-lg text-primary">Shri Ravikant Pandeya Ji</p>
-                  <p className="text-sm text-muted-foreground">Khayal Vocal</p>
-                </div>
-                <div className="text-center">
-                  <div className="aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 mb-4">
-                    <Image src="/ad%20(1).jpeg" alt="Shri Anuj Dangwal Ji" width={100} height={100} className="w-full h-full object-cover" />
-                  </div>
-                  <p className="font-heading text-lg text-primary">Shri Anuj Dangwal Ji</p>
-                  <p className="text-sm text-muted-foreground">Tabla</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+
 
         {/* About Our Teacher */}
         <motion.div
@@ -247,11 +214,11 @@ const WorkshopSection = () => {
           <div className="flex flex-col md:flex-row gap-10 md:gap-12 items-center md:items-start">
             <div className="shrink-0 w-full md:w-80 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30">
               <Image
-                src="/t-2.jpeg"
+                src="/t-4.jpg"
                 alt="Reenu Sharma"
                 width={100}
                 height={100}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
               />
             </div>
             <div className="flex-1 space-y-6">
@@ -274,6 +241,112 @@ const WorkshopSection = () => {
               <div className="pt-6 border-t border-border/50">
                 <p className="text-sm text-muted-foreground">Organized by</p>
                 <p className="font-heading text-xl text-primary mt-2">Avyukta Enterprises</p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+        {/* Classical Musical Baithak */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="max-w-4xl mx-auto my-16"
+        >
+          <Card className="bg-secondary/50 border-gold/20 rounded-none">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <Music className="w-10 h-10 text-gold mx-auto mb-4" />
+                <h4 className="font-heading text-2xl text-primary mb-2">Most Awaited:  Spiritual, Divine & Devotional Indian Classical Musical Baithak</h4>
+                <p className="text-muted-foreground mb-4">
+                  This workshop will be concluded with a soulful Classical Musical Baithak, offering a deeply
+                  calming and elevated closing experience.
+                </p>
+
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 mb-4 relative">
+                    <Image src="/rp%20(1).jpeg" alt="Shri Ravikant Pandeya Ji" fill className="object-cover" sizes="(min-width: 640px) 33vw, 100vw" />
+                  </div>
+                  <p className="font-heading text-lg text-primary">Shri Ravikant Pandeya Ji</p>
+                  <p className="text-sm text-muted-foreground">Tabla</p>
+                </div>
+                <div className="text-center">
+                  <div className="aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 mb-4 relative">
+                    <Image src="/ad%20(1).jpeg" alt="Shri Anuj Dangwal Ji" fill className="object-cover" sizes="(min-width: 640px) 33vw, 100vw" />
+                  </div>
+                  <p className="font-heading text-lg text-primary">Shri Anuj Dangwal Ji</p>
+                  <p className="text-sm text-muted-foreground">Khayal Vocal</p>
+                </div>
+                <div className="text-center">
+                  <div className="aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 mb-4 relative">
+                    <Image src="/m.jpeg" alt="Shri Munee Malviya Ji" fill className="object-cover" sizes="(min-width: 640px) 33vw, 100vw" />
+                  </div>
+                  <p className="font-heading text-lg text-primary">Shri Munee Malviya Ji</p>
+                  <p className="text-sm text-muted-foreground">Harmonium</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+        {/* About Artists */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="max-w-5xl mx-auto"
+        >
+          <p className="text-sm tracking-widest text-muted-foreground mb-10 text-center">About Artists</p>
+          <div className="space-y-12">
+            {/* Shri Anuj Dangwal Ji - Khayal Vocal */}
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
+                <Image src="/ad%20(1).jpeg" alt="Shri Anuj Dangwal Ji" fill className="object-cover" sizes="224px" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-heading text-2xl text-primary mb-2">Shri Anuj Dangwal Ji</h4>
+                <p className="text-gold text-sm mb-4">Gwalior Gharana — Khayal Vocal</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Learning Hindustani Khayal Since 2017 from well known Guru Vidushi Manjusha Patil Ji and Dr Swapnil Chafekar Ji.
+                </p>
+                <p className="text-xs font-medium text-foreground/80 mb-2">Education:</p>
+                <ul className="text-muted-foreground text-sm space-y-1">
+                  <li>• B.A in Sanskrit from Somnath University</li>
+                  <li>• B.A in Indian Classical Music (Vocal) from Chinmaya Vishwavidyapeeth</li>
+                  <li>• M.A in Indian Classical Music (Vocal) from Hemvati Nandan Garhwal University</li>
+                  <li>• Prayag Sangeet Samiti – Sangeet Prabhakar</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Shri Ravikant Pandeya Ji - Tabla */}
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
+                <Image src="/rp%20(1).jpeg" alt="Shri Ravikant Pandeya Ji" fill className="object-cover" sizes="224px" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-heading text-2xl text-primary mb-2">Shri Ravikant Pandeya Ji</h4>
+                <p className="text-gold text-sm mb-4">Farrukhabad Gharana — Tabla</p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Ravikant Pandeya began his association with Indian music through training in the Tabla from Pandit Nikhil Bhawsar in 2007. He was an associated musician with the Shanti Mandir Trust based in Valsad, Gujarat. He began training in the Tabla from renowned maestro, Pandit Abhijeet Banerjee and Shri Rohit Kulkarni in the traditional Guru-Shishya parampara at the Chinmaya Naada Bindu Gurukul and Chinmaya University from 2017 to 2020. He has performed on many of the renowned platforms for Khayal Singing both as a solo performer and accompanist, and has also accompanied many of the stalwart Khayal Singing and Solo performers of the day.
+                </p>
+              </div>
+            </div>
+
+            {/* Shri Munee Malviya Ji - Harmonium */}
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
+                <Image src="/m.jpeg" alt="Shri Munee Malviya Ji" fill className="object-cover" sizes="224px" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-heading text-2xl text-primary mb-2">Shri Munee Malviya Ji</h4>
+                <p className="text-gold text-sm mb-4">Harmonium</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                  Disciple of Ustaad Saleem Allah Wale Ji (Jaipur) and currently getting trained under Pandit Siddhesh Bicholkar Ji (Pune). Ranked B-High Grade from All India Radio Akashwani Bhopal.
+                </p>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  Participation — Performed harmonium solos and also accompanied with renowned artists of our country in various festivals like Tansen Samaroh, Smaran, Dhrupad Utsav, Vishvarang. Also performed in Madhya Pradesh Bhawan Delhi.
+                </p>
               </div>
             </div>
           </div>

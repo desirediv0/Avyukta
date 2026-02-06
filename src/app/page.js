@@ -10,9 +10,9 @@ export default function Home() {
     <main className="min-h-screen">
       <HeroSection />
       <AboutSection />
+      <WorkshopSection />
       <OfferingsSection />
       <ExperienceSection />
-      <WorkshopSection />
       <NadaMandalaSection />
     </main>
   );

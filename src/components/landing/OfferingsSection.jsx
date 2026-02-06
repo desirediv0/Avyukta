@@ -37,7 +37,7 @@ const OfferingsSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="offerings" className="py-24 md:py-32 bg-cream relative">
+    <section id="offerings" className="pb-10 bg-cream relative">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, hsl(var(--primary)) 1px, transparent 0)`,
@@ -75,7 +75,7 @@ const OfferingsSection = () => {
                 <CardContent className="p-8 md:p-10 relative">
                   {/* Gradient Background */}
                   <div className={`absolute inset-0 bg-gradient-to-br ${offering.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-                  
+
                   {/* Content */}
                   <div className="relative z-10">
                     {/* Icon */}
