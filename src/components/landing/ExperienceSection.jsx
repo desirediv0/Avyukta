@@ -2,19 +2,23 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 const experiences = [
   {
     title: "Sensory Awakening",
     description: "Engage all five senses in a journey of discovery. From the first note of fragrance to the last echo of sacred sound, every moment is designed to awaken.",
+    image: "/exp-1.jpg",
   },
   {
     title: "Spiritual Connection",
     description: "Reconnect with the divine within and around you. Our offerings create bridges between the material and the sacred, the everyday and the eternal.",
+    image: "/exp-2.jpg",
   },
   {
     title: "Mindful Living",
     description: "Transform routine into ritual. Learn the art of being fully present, finding beauty in simplicity, and cultivating inner peace amidst life's chaos.",
+    image: "/exp-3.jpg",
   },
 ];
 
@@ -60,8 +64,19 @@ const ExperienceSection = () => {
               transition={{ duration: 0.6, delay: index * 0.15 }}
               className="text-center group"
             >
+              {/* Image - put exp-1.jpg, exp-2.jpg, exp-3.jpg in public folder */}
+              <div className="aspect-[4/3] overflow-hidden rounded-sm border border-gold/20 mb-6 bg-primary-foreground/5">
+                <Image
+                  src={exp.image}
+                  alt={exp.title}
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
               {/* Number */}
-              <div className="mb-6 inline-flex items-center justify-center w-12 h-12 rounded-full border border-gold/40 text-gold font-heading text-xl group-hover:bg-gold/10 transition-colors duration-300">
+              <div className="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-full border border-gold/40 text-gold font-heading text-xl group-hover:bg-gold/10 transition-colors duration-300">
                 {String(index + 1).padStart(2, '0')}
               </div>
 
