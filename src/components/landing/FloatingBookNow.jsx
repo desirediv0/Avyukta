@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const WHATSAPP_URL = "https://wa.me/917503896608?text=Hi%2C%20I%20would%20like%20to%20book%20%2F%20get%20more%20information.";
+const WHATSAPP_URL = "https://wa.me/917011092564?text=Hi%2C%20I%20would%20like%20to%20book%20%2F%20get%20more%20information.";
 
 export default function FloatingBookNow() {
   const [showFloating, setShowFloating] = useState(false);

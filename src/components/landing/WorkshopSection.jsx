@@ -41,11 +41,11 @@ const WorkshopSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const openWhatsApp = () => {
-    window.open("https://wa.me/917503896608?text=Hi, I'm interested in the Manifestation Workshop on 1st March 2026", "_blank");
+    window.open("https://wa.me/917011092564?text=Hi, I'm interested in the Manifestation Workshop on 1st March 2026", "_blank");
   };
 
   const openWhatsAppNada = () => {
-    window.open("https://wa.me/917503896608?text=Hi%2C%20I%20would%20like%20to%20book%20my%20spot%20for%20N%C4%81da-Ma%E1%B9%87%E1%B8%8Dala%20Baithak%20on%201st%20March%202026.", "_blank");
+    window.open("https://wa.me/917011092564?text=Hi%2C%20I%20would%20like%20to%20book%20my%20spot%20for%20N%C4%81da-Ma%E1%B9%87%E1%B8%8Dala%20Baithak%20on%201st%20March%202026.", "_blank");
   };
 
   return (
