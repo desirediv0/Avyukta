@@ -8,10 +8,10 @@ import NadaMandalaSection from "@/components/landing/NadaMandalaSection";
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <HeroSection />
+      {/* <HeroSection /> */}
       <WorkshopSection />
-      <NadaMandalaSection />
-      <OfferingsSection />
+      {/* <NadaMandalaSection /> */}
+      {/* <OfferingsSection /> */}
       <ExperienceSection />
       <AboutSection />
     </main>

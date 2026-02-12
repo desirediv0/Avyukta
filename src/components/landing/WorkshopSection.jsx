@@ -49,7 +49,7 @@ const WorkshopSection = () => {
   };
 
   return (
-    <section id="workshop" className="py-24 md:py-32 bg-cream relative overflow-hidden">
+    <section id="workshop" className="py-16 bg-cream relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 opacity-[0.015]" style={{
         backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237A1F2E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -61,7 +61,7 @@ const WorkshopSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-16 mt-24"
         >
           <span className="ornament text-3xl mb-6 block">✦</span>
           <p className="text-gold tracking-[0.3em] uppercase text-sm mb-4">Upcoming Experience</p>
@@ -81,7 +81,7 @@ const WorkshopSection = () => {
           transition={{ duration: 0.8, delay: 0.1 }}
           className="max-w-4xl mx-auto mb-16"
         >
-          <div className="bg-secondary/50 border border-gold/20 rounded-none p-8 md:p-12 text-center">
+          <div className="bg-secondary/50 border border-gold/20 rounded-none py-8 px-4 md:p-12 text-center">
             <p className="text-lg text-foreground/80 mb-6 leading-relaxed">
               Are you feeling stuck or unclear about your next steps? Are you seeking alignment rather than hustle?
               Do you feel your affirmations are not working even after knowing the Law of Attraction?
@@ -123,9 +123,9 @@ const WorkshopSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="max-w-3xl mx-auto mb-16 text-center"
+          className="max-w-3xl mx-auto mb-12 text-center"
         >
-          <h3 className="font-heading text-2xl text-primary mb-6">Why a Vision Board Works</h3>
+          <h3 className="font-heading text-2xl text-primary mb-4">Why a Vision Board Works</h3>
           <p className="text-muted-foreground text-lg leading-relaxed italic">
             Images bypass logic and directly communicate with the subconscious mind — the space where
             habits, emotions, beliefs, and identity live.
@@ -200,7 +200,7 @@ const WorkshopSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className="max-w-2xl mx-auto mb-16 mt-4"
+          className="max-w-2xl mx-auto mb-8 mt-4"
         >
           <Card className="bg-primary text-primary-foreground overflow-hidden rounded-none">
             <CardContent className="p-8 md:p-12 text-center relative">
@@ -256,7 +256,7 @@ const WorkshopSection = () => {
         {/* About Our Teacher */}
       
         {/* Classical Musical Baithak */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
@@ -298,9 +298,9 @@ const WorkshopSection = () => {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </motion.div> */}
         {/* About Artists */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.5 }}
@@ -308,7 +308,7 @@ const WorkshopSection = () => {
         >
           <p className="text-sm tracking-widest text-muted-foreground mb-10 md:mb-5 text-left md:pl-60">About Artists</p>
           <div className="space-y-12">
-            {/* Shri Anuj Dangwal Ji - Khayal Vocal */}
+            
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
                 <Image src="/ad%20(1).jpeg" alt="Shri Anuj Dangwal Ji" fill className="object-cover" sizes="224px" />
@@ -329,7 +329,7 @@ const WorkshopSection = () => {
               </div>
             </div>
 
-            {/* Shri Ravikant Pandeya Ji - Tabla */}
+            
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
                 <Image src="/rp%20(1).jpeg" alt="Shri Ravikant Pandeya Ji" fill className="object-cover" sizes="224px" />
@@ -343,7 +343,7 @@ const WorkshopSection = () => {
               </div>
             </div>
 
-            {/* Shri Munee Malviya Ji - Harmonium */}
+            
             <div className="flex flex-col md:flex-row gap-8 items-start">
               <div className="shrink-0 w-full md:w-56 aspect-[3/4] overflow-hidden border border-gold/20 bg-secondary/30 relative">
                 <Image src="/m.jpeg" alt="Shri Munee Malviya Ji" fill className="object-cover" sizes="224px" />
@@ -360,10 +360,10 @@ const WorkshopSection = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Book Your Spot to Experience Nāda-Maṇḍala - same UI as ENERGY EXCHANGE */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.75 }}
@@ -376,7 +376,7 @@ const WorkshopSection = () => {
             </p>
           </div>
 
-          {/* DATE, TIME, VENUE cards - same style as workshop details */}
+          
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             <Card className="card-sacred text-center rounded-none">
               <CardContent className="p-6">
@@ -401,7 +401,7 @@ const WorkshopSection = () => {
             </Card>
           </div>
 
-          {/* Dark maroon pricing card - same as ENERGY EXCHANGE */}
+          
           <Card className="bg-primary text-primary-foreground overflow-hidden rounded-none">
             <CardContent className="p-8 md:p-12 text-center relative">
               <div className="absolute top-4 right-4 bg-gold text-maroon-dark text-xs font-bold px-4 py-1 tracking-wider">
@@ -438,7 +438,7 @@ const WorkshopSection = () => {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </motion.div> */}
 
       </div>
     </section>
