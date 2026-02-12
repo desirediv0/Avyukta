@@ -41,7 +41,7 @@ export default function FloatingBookNow() {
           aria-label="Book now via WhatsApp"
         >
           <Image src="/whatsapp.png" alt="WhatsApp" width={24} height={24} className="shrink-0" />
-          BOOK NOW
+          REGISTER NOW
         </motion.button>
       )}
     </AnimatePresence>
