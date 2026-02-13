@@ -27,7 +27,7 @@ const features = [
   {
     icon: Clock,
     title: "TIME",
-    value: "10:00 AM - 7:30 PM",
+    value: "10:00 AM - 6:00 PM",
   },
   {
     icon: MapPin,
