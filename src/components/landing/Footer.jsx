@@ -6,10 +6,8 @@ import Image from "next/image";
 const footerLinks = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
-  { name: "Offerings", href: "#offerings" },
   { name: "Experience", href: "#experience" },
   { name: "Workshops", href: "#workshop" },
-  { name: "Nāda-Maṇḍala", href: "#nada-mandala" },
   { name: "Contact", href: "#footer" },
 ];
 
