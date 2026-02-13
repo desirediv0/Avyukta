@@ -229,10 +229,10 @@ const WorkshopSection = () => {
                 <Gift className="w-5 h-5 text-gold shrink-0" />
                 <span>Vision Board Workshop worth Rs 3500 Included.</span>
               </div>
-              <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
+              {/* <div className="bg-gold/20 border border-gold/30 p-4 mb-8 flex items-center justify-center gap-3">
                 <Gift className="w-5 h-5 text-gold shrink-0" />
                 <span>Nāda-Maṇḍala Classical Baithak worth Rs 2000 Included.</span>
-              </div>
+              </div> */}
 
               <p className="text-xs text-primary-foreground/60 mb-8">
                 *Includes Lunch, High Tea & All Workshop Materials
